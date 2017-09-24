@@ -1,10 +1,10 @@
 http://localhost:81, http://:81 {
-	root RailsDemo/public
+	root RubyDemo/public
 	log caddy.log
 	errors caddy.err
 
-	proxy / unix:RailsDemo/shared/sockets/puma.sock {
-                except /assets
-        }
+	proxy / unix:/Users/Michi/Code/RubyProjects/RailsAssetsErrorDemo/RubyDemo/shared/sockets/puma.sock {
+            except /assets
+    }
 }
 
