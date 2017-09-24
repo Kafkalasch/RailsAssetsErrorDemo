@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RubyDemo</title>
+    <title>RailsDemo</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,5 +10,7 @@
 
   <body>
     <%= yield %>
+    <%= image_tag(yield(:img)) %>
+    <audio src="<%= audio_path(yield(:audio))%>" type="audio/mpeg" controls preload="none"></audio>
   </body>
 </html>
